@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="簡潔美觀的記帳App，支援個人、家庭、情侶、朋友群組財務管理" />
+    
+    <!-- PWA相關 -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+    
+    <!-- iOS Safari相關 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="智慧記帳" />
+    
+    <title>智慧記帳 - 個人與群組財務管理</title>
+    <script type="module" crossorigin src="/assets/index-BjXeC3hA.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D_LMjtkM.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- 註冊Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
+

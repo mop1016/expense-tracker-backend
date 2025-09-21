@@ -1,0 +1,30 @@
+{
+  "name": "智慧記帳 - 個人與群組財務管理",
+  "short_name": "智慧記帳",
+  "description": "簡潔美觀的記帳App，支援個人、家庭、情侶、朋友群組財務管理",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["finance", "productivity", "utilities"],
+  "lang": "zh-TW",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}
+
