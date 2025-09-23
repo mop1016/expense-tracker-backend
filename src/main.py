@@ -25,12 +25,13 @@ app.config['SESSION_COOKIE_SAMESITE'] = os.environ.get('SESSION_COOKIE_SAMESITE'
 app.config['PERMANENT_SESSION_LIFETIME'] = 86400  # 24小時
 app.config['JSON_AS_ASCII'] = False # 解決中文亂碼問題
 
-# 修復的CORS設定 - 支援跨域session
+# 修復的CORS設定 - 支援所有Vercel網址
 CORS(app, 
      origins=[
-         "https://expense-tracker-frontend-git-tau.vercel.app",  # 您的Vercel域名
-         "https://*.vercel.app",  # 允許所有Vercel域名
-         "https://expense-tracker-frontend-nepkprh05-mops-projects-fff61921.vercel.app",  # 您的完整Vercel域名
+         "https://expense-tracker-frontend-git-tau.vercel.app",
+         "https://expense-tracker-frontend-m20inyapa-mops-projects-fff61921.vercel.app",
+         "https://expense-tracker-frontend-nepkprh05-mops-projects-fff61921.vercel.app",
+         "https://*.vercel.app",  # 萬用字元
          "http://localhost:3000",  # 本地開發
          "http://localhost:5173"   # Vite開發伺服器
      ],
